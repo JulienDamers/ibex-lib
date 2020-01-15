@@ -21,7 +21,10 @@ namespace ibex {
  * \brief Thrown when the linear solver give an Exception.
  */
 class LPException : public Exception {
+public:
+	LPException() { count++; }
 
+	static int count;
 };
 
 } // namespace ibex

@@ -10,6 +10,7 @@
 
 #include "ibex_Linear.h"
 #include "ibex_LinearException.h"
+#include "ibex_LPException.h"
 
 #include <math.h>
 #include <float.h>
@@ -21,6 +22,8 @@
 using namespace std;
 
 namespace ibex {
+
+int LPException::count;
 
 namespace {
 double _mig(double x)          { return fabs(x); }

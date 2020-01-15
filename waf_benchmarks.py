@@ -120,6 +120,7 @@ class BenchData (Bench):
 	KEYS_TYPE["uplo"] = float
 	KEYS_TYPE["loup"] = float
 	KEYS_TYPE["random_seed"] = float
+	KEYS_TYPE["lp_except"] = float
 	PREFIX = "BENCH: "
 	RESULTS_PATTERN = "(%s) = (.*)" % "|".join(KEYS_TYPE.keys())
 	RESULTS_RE = re.compile (RESULTS_PATTERN)

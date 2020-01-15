@@ -151,6 +151,8 @@ do_benchs_iter (System &sys, DecimalFP prec, double time_limit,
 
 		Optimizer DefOpt(config);
 
+		LPException::count = 0;
+
 		/* Do the actual computation */
 		Optimizer::Status status = DefOpt.optimize (sys.box);
 
@@ -162,6 +164,7 @@ do_benchs_iter (System &sys, DecimalFP prec, double time_limit,
 		          << " ; uplo = " << DefOpt.get_uplo()
 		          << " ; loup = " << DefOpt.get_loup()
 		          << " ; random_seed = " << config.get_random_seed()
+				  << " ; lp_except = " << LPException::count
 		          << std::endl;
 
 		tot_time += DefOpt.get_time();
